@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*cap_string - capitalizes all the words of a string.
+* cap_string - capitalizes all the words of a string.
 * @str: The string to be capitalized.
 *
 * Return: A pointer to the changed string.
@@ -31,7 +31,7 @@ str[index - 1] == '}' ||
 index == 0)
 str[index] -= 32;
 
-index++
+index++;
 }
 
 return (str);

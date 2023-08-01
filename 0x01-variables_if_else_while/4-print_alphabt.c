@@ -1,25 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
-* main - Prints the alphabet withought q and e.
-*
-* Return: Always 0 (success)
+* main - Prints the alphabet in lower case.
+* Return: 0
 */
+
 int main(void)
 {
+char alpha;
 
-int i;
-
-for (i = 97; i < 123; i++)
+for (alpha = 'a' ; alpha <= 'z' ; alpha++)
 {
-if (i != 101 && i != 113)
+if (alpha != 'q' && alpha != 'e')
 {
-putchar(i);
+putchar(alpha);
 }
 }
-putchar('\n');
+putchar(10);
 return (0);
-
 }

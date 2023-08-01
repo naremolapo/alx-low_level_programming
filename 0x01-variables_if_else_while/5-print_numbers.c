@@ -1,20 +1,18 @@
 #include <stdio.h>
 
 /**
-* main - Prints the alphabet.
-*
-* Return: Always 0 (success)
+* main - Prints single digit numbers of base 10 starting from 0
+* Return: 0
 */
+
 int main(void)
 {
+int numBase;
 
-char alpha[26] = "abcdefghijklmnopqrstuvwxyz";
-int i;
-
-for (i = 0; i < 26; i++)
+for (numBase = 0 ; numBase  <= 9 ; numBase++)
 {
-putchar(alp[i]);
+putchar(numBase + '0');
 }
-putchar('\n');
+putchar(10);
 return (0);
 }

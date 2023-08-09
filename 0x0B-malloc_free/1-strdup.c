@@ -1,30 +1,44 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
-* _strup - duplicate to the new memory space location
-* @str: char
-* Return: 0
-*/
-char *_strup(char *str)
+ * _strlen - Counts the length of a string.
+ * @s: String.
+ * Return: Length.
+ */
+
+unsigned int _strlen(char *s)
 {
+	unsigned int c;
 
-char *aaa;
-int i, r = 0;
+	for (c = 0; s[c]; c++)
+		;
 
-if (str == NULL)
-return (NULL);
-i = 0;
-while  (str[i] != '\0')
-i++;
+	return (c);
+}
 
-aaa = malloc(sizeof(char) * (i + 1));
+/**
+ * _strdup - Creates a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter
+ * @str: String to duplicate.
+ * Return: A pointer.
+ */
+char *_strdup(char *str)
+{
+	unsigned int i, size;
+	char *dup;
 
-if (aaa == NULL)
-return (NULL);
+	if (str == NULL)
+		return (NULL);
 
-for (r = 0; str[r]; r++)
-aaa[r] = str[r];
+	size = _strlen(str);
+	dup = malloc(sizeof(char) * (size + 1));
 
-return (aaa);
+	if (dup == NULL)
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+		dup[i] = str[i];
+
+	return (dup);
 }
